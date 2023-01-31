@@ -1,13 +1,5 @@
 {	
 	"buildCommand": "npm run build",
-	"functions": {
-		"server/index.js": {
-			"runtime": "@vercel/node"
-		},
-		"client/build/**": {
-			"runtime": "@vercel/static"
-		}
-	},
 	"redirects": [
     { "source": "/graphql", "destination": "server/index.js" },
     { "source": "/", "destination": "client/build/index.html" },
