@@ -1,8 +1,27 @@
 {	
-	"buildCommand": "npm run build",
-	"redirects": [
-    { "source": "/graphql", "destination": "server/index.js" },
-    { "source": "/", "destination": "client/build/index.html" },
-    { "source": "/(.+)", "destination": "client/build/$1" }
-  ]
+	"version": 2,
+	"builds": [
+		{
+			"src": "server/index.js",
+			"use": "@vercel/node"
+		},
+		{
+			"src": "client/build/**",
+			"use": "@vercel/static"
+		}
+	],
+	"routes": [
+		{
+			"src": "/graphql",
+			"dest": "server/index.js"
+		},
+		{
+			"src": "/",
+			"dest": "client/build/index.html"
+		},
+		{
+			"src": "/(.+)",
+			"dest": "client/build/index.html"
+		}
+	]
 }
