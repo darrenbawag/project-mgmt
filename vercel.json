@@ -1,5 +1,5 @@
 {	
-	"buildCommand": "npm run start",
+	"buildCommand": "npm run build",
 	"redirects": [
     { "source": "/graphql", "destination": "server/index.js" },
     { "source": "/", "destination": "client/build/index.html" },

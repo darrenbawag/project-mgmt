@@ -7,7 +7,7 @@
 		"start": "node server/index.js",
 		"dev": "nodemon server/index.js",
 		"client-build": "npm run build --prefix client",
-		"client-start": "npm start --prefix client",
+		"client-start": "npm run start --prefix client",
 		"build": "concurrently \"npm run start\" \"npm run client-start\""
 	},
 	"keywords": [],
